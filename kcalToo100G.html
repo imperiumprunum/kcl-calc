@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .container {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        align-self: center;
+      }
+      main {
+        height: 300px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #f5f5dc;
+        border: 2px black dotted;
+        padding: 20px;
+        margin: auto;
+        top: 50%;
+        position: relative;
+        align-self: center;
+      }
+
+      span {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <span>
+          <label for="">Total kcl</label>
+          <input type="text" name="total-kcl" id="total-kcl" value="402" />
+        </span>
+        <span>
+          <label for="">Total weight</label>
+          <input
+            type="text"
+            name="total-weight"
+            id="total-weight"
+            value="200"
+          />
+        </span>
+        <span>
+          <label for="">Total protein</label>
+          <input
+            type="text"
+            name="total-protein"
+            id="total-protein"
+            value="39.8"
+          />
+        </span>
+        <span>
+          <label for="">Total carbs</label>
+          <input type="text" name="total-carbs" id="total-carbs" value="0" />
+        </span>
+        <span>
+          <label for="">Total fat</label>
+          <input type="text" name="total-fats" id="total-fat" value="27.2" />
+        </span>
+
+        <button id="btn">Calculate</button>
+      </main>
+      <h2 id="target">Click button to calculate kcal and macro per 100 g</h2>
+    </div>
+    <script>
+      let target = document.getElementById("target");
+      let btn = document.querySelector("#btn");
+
+      var calculate = function() {
+        let totalKcl = document.querySelector("#total-kcl").value;
+        let totalWeigt = document.querySelector("#total-weight").value;
+        let totalCarbs = document.querySelector("#total-carbs").value;
+        let totalProtein = document.querySelector("#total-protein").value;
+        let totalFat = document.querySelector("#total-fat").value;
+
+        target.innerHTML = `Na 100g Kcal: ${Math.round(
+          (totalKcl * 100) / totalWeigt
+        )} Białko: ${(totalProtein / (totalWeigt / 100)).toPrecision(
+          4
+        )} Węglowodany: ${(totalCarbs / (totalWeigt / 100)).toPrecision(
+          4
+        )}  Tłuszcz: ${(totalFat / (totalWeigt / 100)).toPrecision(4)} `;
+      };
+      btn.addEventListener("click", calculate);
+    </script>
+  </body>
+</html>
