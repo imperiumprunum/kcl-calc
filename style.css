@@ -1,0 +1,31 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+main {
+  height: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f5f5dc;
+  border: 2px black dotted;
+  padding: 20px;
+  margin: auto;
+  top: 50%;
+}
+
+span {
+  display: flex;
+}
