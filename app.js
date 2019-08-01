@@ -10,10 +10,9 @@ var calculate = function() {
 
   target.innerHTML = `Na 100g Kcal: ${Math.round(
     (totalKcl * 100) / totalWeigt
-  )} Białko: ${(totalProtein / (totalWeigt / 100)).toPrecision(
-    4
-  )} Węglowodany: ${(totalCarbs / (totalWeigt / 100)).toPrecision(
-    4
-  )}  Tłuszcz: ${(totalFat / (totalWeigt / 100)).toPrecision(4)} `;
+  )} Białko: ${(totalProtein / (totalWeigt / 100)).toFixed(2)} Węglowodany: ${(
+    totalCarbs /
+    (totalWeigt / 100)
+  ).toFixed(2)}  Tłuszcz: ${(totalFat / (totalWeigt / 100)).toFixed(2)} `;
 };
 btn.addEventListener("click", calculate);
