@@ -11,6 +11,10 @@
   <body>
     <div class="container">
       <main>
+          <span>
+              <label for="">Name</label>
+              <input type="text" name="dish-name" id="dish-name" value="Salomon" />
+            </span>
         <span>
           <label for="">Total kcl</label>
           <input type="text" name="total-kcl" id="total-kcl" value="402" />
@@ -44,7 +48,14 @@
 
         <button id="btn">Calculate</button>
       </main>
-      <div><h2 id="target">Click button to calculate kcal and macro per 100 g</h2></div>
+      <section class="result">
+        <span><p>Salomon</p><p></p></span>
+        <span><p></p><p>100g</p></span>
+        <span><p>Calories</p><p>111</p></span>
+        <span><p>Protein</p><p>111</p></span>
+        <span><p>Total Carbohydrate	</p><p>111</p></span>
+        <span><p>Total Fat</p><p>111</p></span>
+      </section>
     </div>
     <script src="app.js">
     </script>

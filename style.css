@@ -16,15 +16,23 @@ body {
 main {
   height: 300px;
   width: 500px;
+  padding: 20px;
+  border: 2px black dotted;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: #f5f5dc;
-  border: 2px black dotted;
-  padding: 20px;
+  margin-bottom: 10px;
 }
 
 span {
   display: flex;
   justify-content: space-between;
+}
+
+.result {
+  height: auto;
+  width: 500px;
+  padding: 20px;
+  border: black 1px solid;
 }
