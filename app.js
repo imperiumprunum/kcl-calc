@@ -8,7 +8,7 @@ let CalcMcros = function(
 ) {
   return {
     dishName: dishName,
-    kcl: (totalKcl * 100) / totalWeight,
+    kcl: ((totalKcl * 100) / totalWeight).toFixed(2),
     protein: (totalProtein / (totalWeight / 100)).toFixed(2),
     carbs: (totalCarbs / (totalWeight / 100)).toFixed(2),
     fat: (totalFat / (totalWeight / 100)).toFixed(2)
